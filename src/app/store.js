@@ -4,18 +4,18 @@ export const SUCCESSPRODUCT = "successProduct";
 export const ERRORPRODUCT = "errorProduct";
 
 // action creator
-export const requestProduct = () => {
+export const requestProductAction = () => {
   return {
     type: REQUESTPRODUCT,
   };
 };
-export const successProduct = (data) => {
+export const successProductAction = (data) => {
   return {
     type: SUCCESSPRODUCT,
     payload: data,
   };
 };
-export const errorProduct = () => {
+export const errorProductAction = () => {
   return {
     type: ERRORPRODUCT,
   };
@@ -25,7 +25,7 @@ export const initialState = {
   data: {
     product: [],
     error: "",
-    loading: false,
+    loading: true,
   },
 };
 
