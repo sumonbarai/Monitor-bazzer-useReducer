@@ -1,11 +1,14 @@
+import { useReducer } from "react";
+import { createContext } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
-import Home from "./components/pages/Home";
-import NotFound from "./components/pages/NotFound";
-import TopRated from "./components/pages/TopRated";
-import WatchList from "./components/pages/WatchList";
+import reducer, { initialState } from "./app/store";
 
 import Main from "./layout/Main";
+import Home from "./pages/Home";
+import NotFound from "./pages/NotFound";
+import TopRated from "./pages/TopRated";
+import WatchList from "./pages/WatchList";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,10 +33,15 @@ const router = createBrowserRouter([
     ],
   },
 ]);
+
+export const MyContext = createContext();
 function App() {
+  const [store, dispatch] = useReducer(reducer, initialState);
   return (
     <div>
-      <RouterProvider router={router} />
+      <MyContext.Provider value={{ store, dispatch }}>
+        <RouterProvider router={router} />
+      </MyContext.Provider>
     </div>
   );
 }

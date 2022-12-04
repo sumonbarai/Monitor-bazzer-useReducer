@@ -1,6 +1,12 @@
 import React from "react";
+import { useContext } from "react";
+
+import { MyContext } from "../../App";
+
 import monitor from "../../assets/e22-g4-1-500x500.jpg";
 const Product = () => {
+  const data = useContext(MyContext);
+  console.log(data);
   return (
     <section className="product-area bg-slate-100 min-h-screen py-4">
       <div className="container mx-auto">
