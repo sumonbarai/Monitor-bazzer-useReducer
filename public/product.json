@@ -6,69 +6,85 @@
     "display": "IPS, 75Hz, 5ms",
     "ports": "HDMI, VGA",
     "features": "Free Sync, Low Blue Light, Anti-glare",
-    "price": 23000
+    "price": 23000,
+    "name": "HP M22f 22 FHD IPS Monitor",
+    "rating": 5
   },
   {
     "_id": 2,
-    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/m22f/m22f-500x500.jpg",
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/lg-monitor/22mk600m/lg-22mk600m-1-500x500.jpg",
     "resolution": "FHD (1920 x 1080)",
     "display": "IPS, 75Hz, 5ms",
     "ports": "HDMI, VGA",
     "features": "Free Sync, Low Blue Light, Anti-glare",
-    "price": 23000
+    "price": 23000,
+    "name": "HP M22f 22 FHD IPS Monitor",
+    "rating": 3
   },
   {
     "_id": 3,
-    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/m22f/m22f-500x500.jpg",
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/aoc/g2590px/g2590px-01-500x500.jpg",
     "resolution": "FHD (1920 x 1080)",
     "display": "IPS, 75Hz, 5ms",
     "ports": "HDMI, VGA",
     "features": "Free Sync, Low Blue Light, Anti-glare",
-    "price": 23000
+    "price": 23000,
+    "name": "HP M22f 22 FHD IPS Monitor",
+    "rating": 5
   },
   {
     "_id": 4,
-    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/m22f/m22f-500x500.jpg",
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/aoc/22v2q/22v2q-1-500x500.jpg",
     "resolution": "FHD (1920 x 1080)",
     "display": "IPS, 75Hz, 5ms",
     "ports": "HDMI, VGA",
     "features": "Free Sync, Low Blue Light, Anti-glare",
-    "price": 23000
+    "price": 23000,
+    "name": "HP M22f 22 FHD IPS Monitor",
+    "rating": 4
   },
   {
     "_id": 5,
-    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/m22f/m22f-500x500.jpg",
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/acer/ha240y/ha240y-01-500x500.webp",
     "resolution": "FHD (1920 x 1080)",
     "display": "IPS, 75Hz, 5ms",
     "ports": "HDMI, VGA",
     "features": "Free Sync, Low Blue Light, Anti-glare",
-    "price": 23000
+    "price": 23000,
+    "name": "HP M22f 22 FHD IPS Monitor",
+    "rating": 1
   },
   {
     "_id": 6,
-    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/m22f/m22f-500x500.jpg",
+    "image": "https://www.startech.com.bd/image/cache/catalog/television/samsung/ls22r350/ls22r350-1-500x500.jpg",
     "resolution": "FHD (1920 x 1080)",
     "display": "IPS, 75Hz, 5ms",
     "ports": "HDMI, VGA",
     "features": "Free Sync, Low Blue Light, Anti-glare",
-    "price": 23000
+    "price": 23000,
+    "name": "HP M22f 22 FHD IPS Monitor",
+    "rating": 3
   },
   {
     "_id": 7,
-    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/m22f/m22f-500x500.jpg",
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/asus/va229hr/va229hr-1-500x500.jpg",
     "resolution": "FHD (1920 x 1080)",
     "display": "IPS, 75Hz, 5ms",
     "ports": "HDMI, VGA",
     "features": "Free Sync, Low Blue Light, Anti-glare",
-    "price": 23000
+    "price": 23000,
+    "name": "HP M22f 22 FHD IPS Monitor",
+    "rating": 2
   },
   {
     "_id": 8,
-    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/hp-monitor/m22f/m22f-500x500.jpg",
+    "image": "https://www.startech.com.bd/image/cache/catalog/monitor/msi/modern-md241pw/md241pw-01-500x500.jpg",
     "resolution": "FHD (1920 x 1080)",
     "display": "IPS, 75Hz, 5ms",
     "ports": "HDMI, VGA",
     "features": "Free Sync, Low Blue Light, Anti-glare",
-    "price": 23000
+    "price": 23000,
+    "name": "HP M22f 22 FHD IPS Monitor",
+    "rating": 4
   }
 ]

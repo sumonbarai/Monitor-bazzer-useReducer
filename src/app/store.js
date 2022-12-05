@@ -2,6 +2,7 @@
 export const REQUESTPRODUCT = "requestProduct";
 export const SUCCESSPRODUCT = "successProduct";
 export const ERRORPRODUCT = "errorProduct";
+export const ADDTOCARD = "addToCard";
 
 // action creator
 export const requestProductAction = () => {
@@ -20,6 +21,13 @@ export const errorProductAction = () => {
     type: ERRORPRODUCT,
   };
 };
+export const addToCardAction = (product) => {
+  return {
+    type: ADDTOCARD,
+    payload: product,
+  };
+};
+
 // initial state
 export const initialState = {
   data: {
@@ -27,6 +35,8 @@ export const initialState = {
     error: "",
     loading: true,
   },
+  card: [],
+  watchList: [],
 };
 
 const reducer = (state, action) => {
@@ -39,6 +49,8 @@ const reducer = (state, action) => {
           error: "",
           loading: true,
         },
+        card: [...state.card],
+        watchList: [...state.watchList],
       };
     case SUCCESSPRODUCT:
       return {
@@ -48,6 +60,8 @@ const reducer = (state, action) => {
           error: "",
           loading: false,
         },
+        card: [...state.card],
+        watchList: [...state.watchList],
       };
     case ERRORPRODUCT:
       return {
@@ -57,6 +71,17 @@ const reducer = (state, action) => {
           error: "there was an error to data fetching",
           loading: false,
         },
+        card: [...state.card],
+        watchList: [...state.watchList],
+      };
+    case ADDTOCARD:
+      return {
+        ...state,
+        data: {
+          ...state.data,
+        },
+        card: [...state.card, action.payload],
+        watchList: [...state.watchList],
       };
 
     default:

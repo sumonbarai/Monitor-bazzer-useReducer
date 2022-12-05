@@ -34,7 +34,7 @@ const Product = () => {
     );
   } else if (store.data.product?.length > 0) {
     content = store.data.product.map((p) => (
-      <SingleProduct key={p._id} product={store.data.product} />
+      <SingleProduct key={p._id} product={p} />
     ));
   }
   return (
