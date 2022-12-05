@@ -3,6 +3,8 @@ export const REQUESTPRODUCT = "requestProduct";
 export const SUCCESSPRODUCT = "successProduct";
 export const ERRORPRODUCT = "errorProduct";
 export const ADDTOCARD = "addToCard";
+export const ADDTOWATCHLIST = "addToWatchList";
+export const REMOVETOWATCHLIST = "removeToWatchList";
 
 // action creator
 export const requestProductAction = () => {
@@ -24,6 +26,18 @@ export const errorProductAction = () => {
 export const addToCardAction = (product) => {
   return {
     type: ADDTOCARD,
+    payload: product,
+  };
+};
+export const addToWatchListAction = (product) => {
+  return {
+    type: ADDTOWATCHLIST,
+    payload: product,
+  };
+};
+export const removeToWatchListAction = (product) => {
+  return {
+    type: REMOVETOWATCHLIST,
     payload: product,
   };
 };
@@ -82,6 +96,45 @@ const reducer = (state, action) => {
         },
         card: [...state.card, action.payload],
         watchList: [...state.watchList],
+      };
+    case ADDTOWATCHLIST:
+      // its not need to checking but i can apply safely
+      const currentWatchList = state.watchList;
+      const exits = currentWatchList.find(
+        (list) => list._id === action.payload._id
+      );
+
+      if (!exits) {
+        return {
+          ...state,
+          data: {
+            ...state.data,
+          },
+          card: [...state.card],
+          watchList: [...state.watchList, action.payload],
+        };
+      } else {
+        return {
+          ...state,
+          data: {
+            ...state.data,
+          },
+          card: [...state.card],
+          watchList: [...state.watchList],
+        };
+      }
+    case REMOVETOWATCHLIST:
+      const WatchList = state.watchList;
+      const restWatchList = WatchList.filter(
+        (list) => list._id !== action.payload._id
+      );
+      return {
+        ...state,
+        data: {
+          ...state.data,
+        },
+        card: [...state.card],
+        watchList: restWatchList,
       };
 
     default:
