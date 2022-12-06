@@ -20,17 +20,19 @@ const ShoppingCard = () => {
   }
 
   return (
-    <div class="container mx-auto min-h-[88.1vh]">
-      <div class="section-heading py-5 uppercase">
-        <h2 class="text-center text-3xl">Shopping Card</h2>
-        <h3 class="text-center text-2xl">Total Order Item ({TotalQuantity})</h3>
+    <div className="container mx-auto min-h-[88.1vh]">
+      <div className="section-heading py-5 uppercase">
+        <h2 className="text-center text-3xl">Shopping Card</h2>
+        <h3 className="text-center text-2xl">
+          Total Order Item ({TotalQuantity})
+        </h3>
       </div>
 
-      <div class="sm:flex gap-5">
-        <div class="left-side shadow-md w-full sm:w-3/5 lg:w-4/5 h-[25rem] overflow-auto">
+      <div className="sm:flex gap-5">
+        <div className="left-side shadow-md w-full sm:w-3/5 lg:w-4/5 h-[25rem] overflow-auto custom-scrollbar">
           {orderItems}
         </div>
-        <div class="right-side shadow-md w-full sm:w-2/5 lg:w-1/5 p-8">
+        <div className="right-side shadow-md w-full sm:w-2/5 lg:w-1/5 p-8">
           <PriceCalculation />
         </div>
       </div>
