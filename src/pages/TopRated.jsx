@@ -1,10 +1,12 @@
 import React, { useContext } from "react";
+
 import { MyContext } from "../App";
 import SingleProduct from "../components/Product/SingleProduct";
 import Card from "../components/shared/Card";
 
 const TopRated = () => {
   const { store, dispatch } = useContext(MyContext);
+
   // what to render
   let content = "";
   if (store.data.loading) {

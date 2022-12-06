@@ -89,17 +89,41 @@ const reducer = (state, action) => {
         watchList: [...state.watchList],
       };
     case ADDTOCARD:
-      return {
-        ...state,
-        data: {
-          ...state.data,
-        },
-        card: [...state.card, action.payload],
-        watchList: [...state.watchList],
-      };
+      const selectedProduct = action.payload;
+      // checking card already added
+      const checkSelectedProduct = state.card.find(
+        (f) => f._id === selectedProduct._id
+      );
+
+      if (!checkSelectedProduct) {
+        return {
+          ...state,
+          data: {
+            ...state.data,
+          },
+          card: [...state.card, { ...selectedProduct, quantity: 1 }],
+          watchList: [...state.watchList],
+        };
+      } else {
+        const newCardItem = state.card.filter(
+          (c) => c._id !== selectedProduct._id
+        );
+        checkSelectedProduct.quantity = checkSelectedProduct.quantity + 1;
+
+        return {
+          ...state,
+          data: {
+            ...state.data,
+          },
+          card: [...newCardItem, { ...checkSelectedProduct }],
+          watchList: [...state.watchList],
+        };
+      }
+
     case ADDTOWATCHLIST:
       // its not need to checking but i can apply safely
       const currentWatchList = state.watchList;
+
       const exits = currentWatchList.find(
         (list) => list._id === action.payload._id
       );

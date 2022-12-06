@@ -7,6 +7,7 @@ import reducer, { initialState } from "./app/store";
 import Main from "./layout/Main";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import ShoppingCard from "./pages/ShoppingCard";
 import TopRated from "./pages/TopRated";
 import WatchList from "./pages/WatchList";
 const router = createBrowserRouter([
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "watchList",
         element: <WatchList />,
+      },
+      {
+        path: "shoppingCard",
+        element: <ShoppingCard />,
       },
       {
         path: "*",
